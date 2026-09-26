@@ -1,23 +1,70 @@
 aid: auris-surgical-robotics
+
 name: Auris Health
-description: 'Auris Health is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Auris Health, now part of Johnson & Johnson MedTech, develops the MONARCH robotic-assisted bronchoscopy platform for lung diagnostics. The company focuses on innovative medical devices that enable physicians to navigate and biopsy hard-to-reach lung nodules, improving early detection and treatment of lung cancer. Through its integration with J&J MedTech, Auris Health leverages extensive resources to advance robotic bronchoscopy technology and expand its clinical impact worldwide.'
+
 url: https://raw.githubusercontent.com/api-evangelist/auris-surgical-robotics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Medical Devices
+- Robotics
+- Healthcare
+- Bronchoscopy
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/auris-surgical-robotics-llms.txt
+- type: Hosts
+  url: hosts/auris-surgical-robotics-hosts.yml
+- type: Vendors
+  url: vendors/auris-surgical-robotics-vendors.yml
+- type: Support
+  url: https://www.jnjmedtech.com/en-US/products/cardiovascular/carto/support/
+- type: SignUp
+  url: https://www.jnjmedtech.com/en-US/register/
+- type: PrivacyPolicy
+  url: https://www.jnjmedtech.com/system/files/pdf/Privacy%20policy_0.pdf
+- type: Newsroom
+  url: https://www.jnjmedtech.com/en-US/news/press-releases/
+- type: DomainSecurity
+  url: security/auris-surgical-robotics-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/auris-surgical-robotics_stock/
+  url: https://www.jnjmedtech.com/en-US/products/robotics/monarch-platform/bronchoscopy/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No public developer program or API documentation is available; attempts to fetch OpenAPI specs returned HTTP 403.
+  evidence:
+    - url: https://api.jnjmedtech.com/openapi.json
+      status: 403
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
